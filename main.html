@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./main.js"/>
+    <!-- <script src="./main.js"/> -->
+
     <title>Demonstracao</title>
 </head>
 <body>
     <div>
         login<br/>
-        <input type="text">
+        <input id='login' type="text">
     </div>
     <div>
         senha<br/>
-        <input type="password">
+        <input id='senha'type="password">
     </div>
     <div>
-        <button>Login</button>
+        <button onclick=logar()>Login</button>
     </div>
 </body>
+<script>
+    var login;
+    var senha;
+
+    const logar = () => {
+        login = document.getElementById('login').value
+        senha = document.getElementById('senha').value
+        console.log(`O login e: ${login} e a senha e: ${senha}`)
+    }
+</script>
 </html>
